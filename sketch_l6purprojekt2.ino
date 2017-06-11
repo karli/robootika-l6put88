@@ -1,6 +1,5 @@
 #include <MeMCore.h>
 
-// lähtesta mootorid ja sonar
 MeDCMotor motor1(M1);
 MeDCMotor motor2(M2);
 MeUltrasonicSensor sonar(PORT_3);
@@ -56,13 +55,11 @@ void turnAround() {
 }
 
 
-/**
-   units - how many units should the robot move straight. 1 unit is equal to the amount of mm-s that robot will move during 100ms of motorspeed 100.
-*/
 void goStraight(int units) {
   int directionMultiplier = units > 0 ? 1 : -1;
   motor1.run(directionMultiplier * -1 * leftMotorSpeed);
   motor2.run(directionMultiplier * rightMotorSpeed);
+  delay(200);
 }
 
 void goInCircle() {
