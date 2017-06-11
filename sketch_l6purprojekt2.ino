@@ -9,7 +9,7 @@ boolean findObstacleMode = true;
 boolean goAroundObstacleMode = true;
 boolean goInCircleMode = true;
 int lightSensorPin = A6;
-int lightUpThreshold = 600;
+int lightUpThreshold = 400;
 MeRGBLed led1(PORT7);
 int lightningCounter = 0;
 
@@ -17,7 +17,6 @@ void setup() {
   delay(500);
   Serial.begin(9600);
   pinMode(lightSensorPin, INPUT);
-
 }
 
 void loop() {
